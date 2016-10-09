@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Грамматика</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Nikita Volobuev">
+
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <h3 class="text-center">Задание #1</h3>
+        <p class="text-center">
+            Дополнить грамматику <strong>"C -> CC | (C) | e"</strong>  правилами, позволяющими получаить сбалансированные
+            цепочки со скобками разных видов, включая квадратные и фигурные
+        </p>
+        <h4 class="text-center">Решение #1</h4>
+        <p class="text-center">
+            Дополненная грамматика: С -> CC | (C) | [C] | {C} | e
+        </p>
+        <p class="text-center">
+            <b>Пример 1:</b> C -> {C} -> {[C]} -> {[(C)]} -> {[(CC)]} -> {[({C}C)]} -> {[({[C]}C)]} -> {[({[(C)]}C)]} -> {[({[(C)]}{C})]} -> {[({[(C)]}{[C]})]} ->
+            {[({[(C)]}{[(C)]})]} -> {[({[()]}{[(C)]})]} -> {[({[()]}{[()]})]}
+        </p>
+        <pre>
+            {
+            [
+            (
+            {
+            [
+            ()
+            ]
+            }
+            {
+            [
+            ()
+            ]
+            }
+            )
+            ]
+            }
+        </pre>
+
+        <p class="text-center">
+            <b>Пример 2:</b> C -> {C} -> {CC} - > {{C}C} -> {{[C]}C} -> {{[(C)]}C} -> {{[(C)]}{C}} -> {{[(C)]}{[C]}} -> {{[(C)]}{[(C)]}} -> {{[()]}{[(C)]}} ->
+            {{[()]}{[()]}}
+        </p>
+        <pre>
+            {
+            {
+            [
+            ()
+            ]
+            }
+            {
+            [
+            ()
+            ]
+            }
+            }
+        </pre>
+
+        <h3 class="text-center">Задание #2</h3>
+        <p class="text-center">
+            Как получить цепочки вида (()) и НЕ получать цепочки вида ()()  ?
+        </p>
+        <h4 class="text-center">Решение #1</h4>
+        <p class="text-center">
+            Грамматика: С -> (C) | e
+        </p>
+        <b>Примеры</b>
+        <pre>
+            C -> (C) -> ()
+            C -> (C) -> ((C)) -> (())
+            C -> (C) -> ((C)) -> (((C))) -> ((()))
+            C -> (C) -> ((C)) -> (((C))) -> ((((C)))) -> (((())))
+            C -> (C) -> ((C)) -> (((C))) -> ((((C)))) -> (((((C))))) -> ((((()))))
+
+            И т.д.
+        </pre>
+
+        <h3 class="text-center">Задание #3</h3>
+        <p class="text-center">
+            <a href="http://pascalabc.net/WDE/?file=01011.pas">Задача</a> - переделать в
+            JavaScript или Python или Ruby.
+        </p>
+
+        <p class="text-center">
+            <a href="https://repl.it/DhKQ/3">исходный код</a>
+        </p>
+        <script src="//repl.it/embed/DhKQ/3.js"></script>
+    </body>
+</html>

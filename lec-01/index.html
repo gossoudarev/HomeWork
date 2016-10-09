@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Использование MathML с помощью MathJax</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Nikita Volobuev">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+<body>
+<div>
+    <h3 class="text-center">Примеры MathML</h3>
+</div>
+
+<div class="text-center">
+    <a href="http://comp-science.narod.ru/mml/mathml.htm">теория</a>&nbsp &nbsp
+    <a href="http://www.w3.org/TR/2014/REC-MathML3-20140410/Overview.html">документация</a>
+</div><br>
+
+<div class="col-xs-12">
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">№</th>
+            <th class="text-center">Пример</th>
+        </tr>
+        <tr>
+            <td class="text-center">1</td>
+            <td class="text-center">
+                <math>
+                    <msqrt>
+                        <mrow>
+                            <mi>a</mi>
+                            <mo>+</mo>
+                            <mi>b</mi>
+                        </mrow>
+                    </msqrt>
+                </math>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center">2</td>
+            <td class="text-center">
+                <math>
+                    <mfrac>
+                        <mi>a</mi>
+                        <mi>b</mi>
+                    </mfrac>
+                </math>
+            </td>
+        </tr>
+        <tr>
+            <td class="text-center">3</td>
+            <td class="text-center">
+                <math>
+                    <mfenced separators="" open="{" close="">
+                        <mtable>
+                            <mtr>
+                                <mtd>
+                                    <msub><mi>a</mi><mn>11</mn></msub>
+                                    <msub><mi>x</mi><mn>1</mn></msub>
+                                    <mo>+</mo>
+                                    <msub><mi>a</mi><mn>12</mn></msub>
+                                    <msub><mi>x</mi><mn>2</mn></msub>
+                                    <mo>+</mo>
+                                    <mi>...</mi>
+                                    <mo>+</mo>
+                                    <msub><mi>a</mi><mn>1n</mn></msub>
+                                    <msub><mi>x</mi><mn>n</mn></msub>
+                                    <mo>=</mo>
+                                    <msub><mi>b</mi><mn>1</mn></msub>
+                                </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd>
+                                    <msub><mi>a</mi><mn>21</mn></msub>
+                                    <msub><mi>x</mi><mn>1</mn></msub>
+                                    <mo>+</mo>
+                                    <msub><mi>a</mi><mn>22</mn></msub>
+                                    <msub><mi>x</mi><mn>2</mn></msub>
+                                    <mo>+</mo>
+                                    <mi>...</mi>
+                                    <mo>+</mo>
+                                    <msub><mi>a</mi><mn>2n</mn></msub>
+                                    <msub><mi>x</mi><mn>n</mn></msub>
+                                    <mo>=</mo>
+                                    <msub><mi>b</mi><mn>2</mn></msub>
+                                </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd>
+                                    <mi>...</mi>
+                                </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd>
+                                    <msub><mi>a</mi><mn>m1</mn></msub>
+                                    <msub><mi>x</mi><mn>1</mn></msub>
+                                    <mo>+</mo>
+                                    <msub><mi>a</mi><mn>m2</mn></msub>
+                                    <msub><mi>x</mi><mn>2</mn></msub>
+                                    <mo>+</mo>
+                                    <mi>...</mi>
+                                    <mo>+</mo>
+                                    <msub><mi>a</mi><mn>mn</mn></msub>
+                                    <msub><mi>x</mi><mn>n</mn></msub>
+                                    <mo>=</mo>
+                                    <msub><mi>b</mi><mn>m</mn></msub>
+                                </mtd>
+                            </mtr>
+                        </mtable>
+                    </mfenced>
+                </math>
+            </td>
+
+        <tr>
+            <td class="text-center">4</td>
+            <td class="text-center">
+                <math>
+                    <mi>Α</mi>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo> ( </mo>
+                        <mtable>
+                            <mtr>
+                                <mtd> <msub><mi>a</mi><mn>11</mn></msub></mtd>
+                                <mtd> <msub><mi>a</mi><mn>12</mn></msub> </mtd>
+                                <mtd> <mn>...</mn> </mtd>
+                                <mtd> <msub><mi>a</mi><mn>1n</mn></msub> </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <msub><mi>a</mi><mn>21</mn></msub></mtd>
+                                <mtd> <msub><mi>a</mi><mn>22</mn></msub> </mtd>
+                                <mtd> <mn>...</mn> </mtd>
+                                <mtd> <msub><mi>a</mi><mn>2n</mn></msub> </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <mn>⋮</mn> </mtd>
+                                <mtd> <mn>⋮</mn> </mtd>
+                                <mtd> <mn>⋱</mn> </mtd>
+                                <mtd> <mn>⋮</mn> </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <msub><mi>a</mi><mn>m1</mn></msub></mtd>
+                                <mtd> <msub><mi>a</mi><mn>m2</mn></msub> </mtd>
+                                <mtd> <mn>...</mn> </mtd>
+                                <mtd> <msub><mi>a</mi><mn>mn</mn></msub> </mtd>
+                            </mtr>
+                        </mtable>
+                        <mo> ) </mo><mn>; &nbsp</mn>
+                    </mrow>
+
+                    <mi>&nbsp x</mi>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo> ( </mo>
+                        <mtable>
+                            <mtr>
+                                <mtd> <msub><mi>x</mi><mn>1</mn></msub></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <msub><mi>x</mi><mn>2</mn></msub></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <mn>⋮</mn> </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <msub><mi>x</mi><mn>n</mn></msub></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo> ) </mo><mn>; &nbsp</mn>
+                    </mrow>
+
+                    <mi>&nbsp b</mi>
+                    <mo>=</mo>
+                    <mrow>
+                        <mo> ( </mo>
+                        <mtable>
+                            <mtr>
+                                <mtd> <msub><mi>b</mi><mn>1</mn></msub></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <msub><mi>b</mi><mn>2</mn></msub></mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <mn>⋮</mn> </mtd>
+                            </mtr>
+                            <mtr>
+                                <mtd> <msub><mi>b</mi><mn>m</mn></msub></mtd>
+                            </mtr>
+                        </mtable>
+                        <mo> ) </mo><mn>;</mn>
+                    </mrow>
+                </math>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h3 class="text-center">Примеры MathJax</h3>
+</div>
+
+<div class="text-center">
+    <a href="http://radioprog.ru/post/74">Краткий справочник</a>
+</div><br>
+
+<div class="col-xs-12">
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center">№</th>
+            <th class="text-center">Пример</th>
+        </tr>
+        <tr>
+            <th class="text-center">1</th>
+            <th class="text-center">
+                $$ \sqrt{a + b} $$
+            </th>
+        </tr>
+        <tr>
+            <th class="text-center">2</th>
+            <th class="text-center">
+                $$ \frac{a}{b} $$
+            </th>
+        </tr>
+        <tr>
+            <th class="text-center">3</th>
+            <th class="text-center">
+                $$ \left\{ \begin{array}
+                aa_{11}x_1+a_{12}x_2+ \cdots + a_{1n}x_n = b_1 \\
+                a_{21}x_1+a_{22}x_2+ \cdots + a_{2n}x_n = b_2 \\
+                \cdots \\
+                a_{m1}x_1+a_{m2}x_2+ \cdots + a_{mm}x_n = b_m
+                \end{array}\right.$$
+            </th>
+        </tr>
+    </table>
+</<div>
+</body>
+</html>
